@@ -1,0 +1,38 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "lib": ["ESNext"],
+    "module": "NodeNext",
+    "sourceMap": true,
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "typeRoots": ["node_modules/@types"],
+
+    /* Module Resolution Options */
+    "moduleResolution": "NodeNext",
+    "moduleDetection": "force",
+    "allowJs": true,
+    "allowArbitraryExtensions": true,
+    "verbatimModuleSyntax": true,
+    "baseUrl": "./src",
+    "esModuleInterop": true,
+
+    /* linting  settings */
+    "strictNullChecks": true,
+    "strict": true,
+    "noImplicitAny": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "importsNotUsedAsValues": "remove",
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitReturns": true,
+    "noPropertyAccessFromIndexSignature": true,
+
+    /* Advanced Options */
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
+  },
+    "lib": ["es2015"],
+    "include": ["src/**/*"],
+    "exclude": ["node_modules"]
+}

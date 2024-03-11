@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign-Up</title>
+  <link rel="shortcut icon" href="assets/icons/icon.svg" type="image/x-icon">
+  <link rel="stylesheet" href="main.css">
+  <script defer src="signup.js"></script>
+</head>
+
+<body>
+  <main>
+    <h1>Register for an Account!</h1>
+    <form id="signup-form">
+      <label for="nickname">Nickname:
+        <input type="text" name="nickname" id="nickname" placeholder="Nick name" required minlength="3" maxlength="100">
+      </label>
+      <label for="email">Email:
+        <input type="email" name="email" id="email" required>
+      </label>
+      <div>
+        <label for="password">Password:
+          <input type="text" name="password" id="password" placeholder="enter your password" required minlength="8"
+            maxlength="50">
+        </label>
+        <label for="confirm-password">Confirm:
+          <input type="text" name="password" id="confirm-password" placeholder="Confirm your Password" required
+            minlength="8" maxlength="50">
+        </label>
+      </div>
+      <button type="submit">Signup</button>
+    </form>
+    <footer>
+      <p>
+        Already have an account? <a href="/login">Login Here!</a>
+      </p>
+    </footer>
+  </main>
+</body>
+
+</html>
