@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "IBMplexMono";
+  src: local("IBMplexMono"),
+    url("/assets/fonts/IBMPlexMono-Bold.woff2") format("woff2"),
+    url("/assets/fonts/IBMPlexMono-Bold.ttf") format("truetype");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "IBMplexMono";
+  src: local("IBMplexMono"),
+    url("/assets/fonts/IBMPlexMono-BoldItalic.woff2") format("woff2"),
+    url("/assets/fonts/IBMPlexMono-BoldItalic.ttf") format("truetype");
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Outfit";
+  src: local("Outfit"),
+    url("/assets/fonts/Outfit-Bold.woff2") format("woff2"),
+    url("/assets/fonts/Outfit-Bold.ttf") format("truetype");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Outfit";
+  src: local("Outfit"),
+    url("/assets/fonts/Outfit-SemiBold.woff2") format("woff2"),
+    url("/assets/fonts/Outfit-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Outfit";
+  src: local("Outfit"),
+    url("/assets/fonts/Outfit-Medium.woff2") format("woff2"),
+    url("/assets/fonts/Outfit-Medium.ttf") format("truetype");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Outfit";
+  src: local("Outfit"),
+    url("/assets/fonts/Outfit-Regular.woff2") format("woff2"),
+    url("/assets/fonts/Outfit-Regular.ttf") format("truetype");
+  font-weight: 400;
+}

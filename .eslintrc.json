@@ -9,7 +9,10 @@
         "ecmaVersion": "latest",
         "sourceType": "module"
     },
+    "ignorePatterns": ["public", "**/**.js", "**.js"],
     "plugins": ["@typescript-eslint"],
     "rules": {
+        "@typescript-eslint/no-misused-promises": "off",
+        "@typescript-eslint/explicit-function-return-type": "off"
     }
 } 

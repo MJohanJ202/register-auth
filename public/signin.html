@@ -4,46 +4,45 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sign-Up</title>
+  <title>Login</title>
   <link rel="shortcut icon" href="assets/icons/icon.svg" type="image/x-icon">
   <link rel="stylesheet" href="styles/main.css">
-  <script defer src="scripts/signup.js"></script>
+  <script defer src="scripts/signin.js"></script>
 </head>
+<!-- sign in -->
 
 <body>
   <main class="font-Outfit font-normal">
     <!-- component -->
     <div class="flex min-h-[100dvh]">
       <!-- Left Pane -->
-      <section
-        class="hidden lg:py-8 bg-ebony-700 dark:bg-ebony-950 lg:flex items-center justify-center flex-1 text-black">
-        <header class="flex flex-col justify-center">
-          <div class="my-4">
+      <section class="hidden bg-ebony-400 dark:bg-ebony-950 lg:flex items-center justify-center flex-1 text-black">
+        <header class="flex flex-col items-center justify-center">
+          <div class="mb-12">
             <h1
-              class="text-4xl w-fit font-bold leading-none text-white dark:text-ebony-50 tracking-[.4rem] font-IBMplexMono">
-              DEV Technology
+              class="text-5xl font-bold leading-none text-ebony-950 dark:text-ebony-50 tracking-[.4rem] font-IBMplexMono">
+              Hello Again!
               <span
-                class="text-xl font-Outfit w-[26rem] text-left text-white dark:text-ebony-100 block tracking-[0] font-medium pt-4 leading-[1.5]">
-                Information on the latest technologies and gossip from the dev
-                community.
+                class="text-4xl leading-none text-ebony-900 dark:text-ebony-100 block tracking-[0] text-center font-bold pt-4">
+                Welcome Back
               </span>
             </h1>
           </div>
           <div class="max-w-md text-center">
-            <img class="aspect-[1.2/1]" src="/assets/icons/signup.svg" alt="sign up icon" />
+            <img class="aspect-[1.2/1]" src="/assets/icons/signin.svg" alt="authentication icon" />
           </div>
         </header>
       </section>
       <!-- Right Pane -->
       <section class="w-full bg-white dark:bg-ebony-900 lg:w-1/2 flex items-center justify-center">
         <div class="max-w-md w-full p-6">
-          <!-- header - rigth-panel -->
+          <!-- header - right-panel -->
           <header class="text-center mb-12">
             <h2 class="text-2xl lg:text-3xl font-semibold mb-2 lg:mb-4 text-ebony-900 dark:text-ebony-50">
               DevInform
             </h2>
             <p class="text-[.9rem] lg:text-lg font-medium text-waterloo--800 dark:text-waterloo--50">
-              Join to Our Community with all time access and free
+              The most popular peer to peer lending at SEA
             </p>
           </header>
           <!-- login with others platforms -->
@@ -64,51 +63,46 @@
             </div>
           </section>
           <!-- --or-- -->
-          <div class="relative mt-8 lg:mt-12 mb-6 lg:mb-8 text-sm text-waterloo--800 dark:text-waterloo--50 text-center">
-            <hr class="border-0 border-solid border-b-[.1rem] border-ebony-100 dark:border-waterloo--950 rounded-full" />
+          <div
+            class="relative mt-8 lg:mt-12 mb-6 lg:mb-8 text-sm text-waterloo--800 dark:text-waterloo--50 text-center">
+            <hr
+              class="border-0 border-solid border-b-[.1rem] border-ebony-100 dark:border-waterloo--950 rounded-full" />
             <p
               class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 text-sm lg:text:xs font-medium uppercase w-fit bg-white dark:bg-ebony-950 px-8">
               or
             </p>
           </div>
-          <form id="signup-form" class="space-y-4">
+          <!-- form -->
+          <form id="signin-form" class="space-y-4">
             <!-- Your form elements go here -->
             <div>
-              <label for="username" class="block text-sm font-medium text-ebony-950 dark:text-ebony-100">Username</label>
-              <input type="text" id="username" required minlength="3" maxlength="32" name="username"
-                pattern="^[a-zA-Z0-9@._\-]{3,32}$"
-                title="username is invalid enter a valid  username (3, 32 only alphanumeric characters are allowed, @, ., _ o -)"
+              <label for="email" class="block text-sm font-medium text-waterloo--800 dark:text-ebony-100">Email</label>
+              <input type="email" required id="email" name="email"
+                pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
                 class="mt-1 p-2 w-full border border-ebony-400 rounded-md focus:border-ebony-500 dark:focus:border-waterloo--50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ebony-600 dark:focus:ring-waterloo--300 transition-colors duration-300 text-ebony-950" />
             </div>
             <div>
-              <label for="email" class="block text-sm font-medium text-ebony-950 dark:text-ebony-100">Email</label>
-              <input type="email" required id="email" name="email" pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$" maxlength="64"
-                title="Enter a valid email address."
-                class="mt-1 p-2 w-full border border-ebony-400 rounded-md focus:border-ebony-500 dark:focus:border-waterloo--50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ebony-600 dark:focus:ring-waterloo--300 transition-colors duration-300 text-ebony-950" />
-            </div>
-            <div>
-              <label for="password" class="block text-sm font-medium text-ebony-950 dark:text-ebony-100">Password</label>
-              <input type="password" id="password" minlength="8" maxlength="32" required
-                pattern="^(?=.*[a-zA-Z\d])[A-Za-z\d@$!%*?& ]{8,32}$" name="password"
-                title="The password must be between 8 and 32 characters long, and contain at least one letter or digit. It may include special characters."
+              <label for="password"
+                class="block text-sm font-medium text-waterloo--800 dark:text-ebony-100">Password</label>
+              <input type="password" id="password" minlength="8" maxlength="32" required name="password"
                 class="mt-1 p-2 w-full border border-ebony-400 rounded-md focus:border-ebony-500 dark:focus:border-waterloo--50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ebony-600 dark:focus:ring-waterloo--300 transition-colors duration-300 text-ebony-950" />
             </div>
             <div>
               <button type="submit"
                 class="w-full bg-ebony-700 hover: hover:bg-ebony-500 text-white p-2 rounded-md focus:outline-none focus:bg-ebony-700 focus:ring-2 focus:ring-offset-2 dark:hover:outline dark:outline-1 focus:ring-ebony-800 transition-colors duration-300 dark:hover:bg-ebony-950 dark:hover:outline-ebony-50">Sign
-                Up</button>
-              </div>
+                in</button>
+            </div>
           </form>
           <!-- redirect to sign up -->
           <footer class="mt-4 text-[.9rem] lg:text-sm text-waterloo--800 dark:text-waterloo--50 text-center">
             <p>
-              Already have an account?
-              <a href="/" class="text-ebony-950 font-medium dark:text-ebony-400 hover:underline">Sign in here</a>
-              </p>
-              </footer>
+              Don't have an account yet?
+              <a href="/signup" class="text-waterloo--950 font-medium dark:text-ebony-400 hover:underline">Sign up</a>
+            </p>
+          </footer>
         </div>
-        </section>
-        </div>
+      </section>
+    </div>
   </main>
 </body>
 
