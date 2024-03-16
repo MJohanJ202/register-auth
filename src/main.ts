@@ -1,5 +1,5 @@
-import { createConnection } from 'config/connectClient.js'
-import { app } from 'server.js'
+import { createConnection } from './config/connectClient.js'
+import { app } from './server.js'
 
 const PORT = process.env.PORT ?? 5000
 const HOST = process.env.HOST ?? 'localhost'

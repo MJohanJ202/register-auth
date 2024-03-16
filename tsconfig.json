@@ -1,20 +1,19 @@
 {
   "compilerOptions": {
-    "target": "ESNext",
-    "lib": ["ESNext"],
-    "module": "NodeNext",
+    "target": "ES6",
+    "lib": ["ES2023", "ESNext"],
+    "module": "Node16",
     "sourceMap": true,
     "outDir": "./dist",
     "rootDir": "./src",
     "typeRoots": ["node_modules/@types"],
 
     /* Module Resolution Options */
-    "moduleResolution": "NodeNext",
+    "moduleResolution": "Node16",
     "moduleDetection": "force",
     "allowJs": true,
     "allowArbitraryExtensions": true,
     "verbatimModuleSyntax": true,
-    "baseUrl": "./src",
     "esModuleInterop": true,
 
     /* linting  settings */
@@ -24,6 +23,9 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
+		"removeComments": true,
+		"allowSyntheticDefaultImports": true,
+		"downlevelIteration": true,
 
     /* Advanced Options */
     "skipLibCheck": true,

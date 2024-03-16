@@ -1,8 +1,7 @@
-/* eslint-disable @typescript-eslint/explicit-function-return-type */
 /* eslint-disable @typescript-eslint/no-extraneous-class */
 
 import { Schema, model } from 'mongoose'
-import type { UserType } from 'schemas/auth.js'
+import type { UserType } from '../schemas/auth.js'
 
 const userSchema = new Schema({
   username: { type: String, required: true, unique: true },
@@ -24,12 +23,12 @@ export class UserModel {
     return await authModel.create(user)
   }
 
-  static async registered ({ email, username }: Omit<UserType, 'password'>) {
+  static async containsThat ({ email, username }: Omit<UserType, 'password'>) {
     const isRegistered = await authModel.exists({ $or: [{ email }, { username }] })
     return isRegistered
   }
 
-  static async verifyUser ({ email }: Omit<UserType, 'username' | 'password'>) {
+  static async verification ({ email }: Omit<UserType, 'username' | 'password'>) {
     const existUser = await authModel.exists({ email })
     if (existUser === null) return false
     const user = await authModel.findById(existUser._id).select('password')

@@ -1,12 +1,10 @@
 import { type Request, type Response } from 'express'
+import { resolve } from 'path'
 
-const signup = async (_req: Request, res: Response) => {
-  return undefined
+export const signin = (_req: Request, res: Response) => {
+  res.sendFile(resolve('./', 'public/signin.html'))
 }
 
-const signin = async (_req: Request, res: Response) => {
-  return undefined
+export const signup = (_req: Request, res: Response) => {
+  res.sendFile(resolve('./', 'public/signup.html'))
 }
-
-export { signin, signup }
-

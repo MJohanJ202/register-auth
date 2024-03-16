@@ -4,10 +4,10 @@
   "main": "dist/main.js",
   "type": "module",
   "scripts": {
-    "build": "tsc",
-    "build:css": "npx tailwindcss -i public/styles/global.css -o public/styles/main.css --watch",
+    "watch:css": "npx tailwindcss -i public/styles/global.css -o public/styles/main.css --watch",
+    "build": "npx tailwindcss -i public/styles/global.css -o public/styles/main.css && tsc",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node --env-file=.env --env-file=.development.env dist/main.ts",
+    "start": "node --env-file=.env --env-file=.development.env dist/main.js",
     "dev": "bun --env-file=.env --env-file=.development.env --watch src/main.ts"
   },
   "keywords": [],

@@ -1,15 +1,15 @@
 import z from 'zod'
 
-const regex = {
+const validationsAuth = {
   email: /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/,
   username: /^[a-zA-Z0-9@._-]{3,32}$/,
   password: /^(?=.*[a-zA-Z\d])[A-Za-z\d@$!%*?& ]{8,32}$/
 }
 
 const userSchema = z.object({
-  username: z.string().min(8).max(32).regex(regex.username),
-  email: z.string().email({ message: 'Invalid Email' }).regex(regex.email),
-  password: z.string().min(8).max(32).regex(regex.password)
+  username: z.string().min(8).max(32).regex(validationsAuth.username),
+  email: z.string().email({ message: 'Invalid Email' }).regex(validationsAuth.email),
+  password: z.string().min(8).max(32).regex(validationsAuth.password)
 })
 
 const userRegisterSchema = userSchema.omit({ username: true })
